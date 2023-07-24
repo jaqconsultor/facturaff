@@ -1,0 +1,19 @@
+		// TODO Agregar un Registro en OPenxava
+		// Como Agregar Un en Openxava
+		Parentesco parentesco = new Parentesco();
+		parentesco.setDescripcion("Esposo");
+		parentesco.setActivo(1);
+		XPersistence.getManager().persist(parentesco);
+		
+		// Modificar
+		Parentesco parentesco1 = XPersistence.getManager().find(Parentesco.class, 1);
+		parentesco1.setDescripcion("Esposo");
+
+		// Borrar
+		XPersistence.getManager().remove(parentesco1);
+		
+		// Leer Una Entidad
+		Parentesco parentesco2 = (Parentesco) XPersistence.getManager().createQuery("from Parentesco p where p.id = 1 ").getSingleResult();
+		
+		// Leer Varias Entidades
+		Parentesco parentesco3 = (Parentesco) XPersistence.getManager().createQuery("from Parentesco").getResultList();

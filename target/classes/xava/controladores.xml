@@ -1,0 +1,52 @@
+<?xml version = "1.0" encoding = "ISO-8859-1"?>
+
+<!DOCTYPE controladores SYSTEM "dtds/controladores.dtd">
+
+<controladores>
+    
+    <!-- Variable de entorno: 
+    <var-entorno nombre="facturaff_ANYO_DEFECTO" valor="2015"/>
+    -->
+    
+    <!-- Objeto de sesión:
+    <Objeto nombre="facturaff_anyoActivo" clase="java.lang.Integer" valor="2015" 
+            ambito="global"/>
+    -->
+    
+    <!-- Controlador:
+    <controlador nombre="Profesor">
+        <hereda-de controlador="Typical"/>
+        <accion nombre="new" icono="library-plus" atajo-de-teclado="Control N" 
+                clase="acciones.CrearProfesor"/>        
+    </controlador>
+    -->
+
+	<controlador nombre="SoloExcel">
+		<hereda-de controlador="Navigation"/>
+		<accion nombre="generateXLS" modo="list"
+			clase="org.openxava.actions.GenerateReportAction"
+			imagen="excel.gif"
+			icono="file-excel">
+			<poner propiedad="type" valor="xls"/>	
+		</accion>
+	</controlador>
+    
+    	<controlador nombre="Productos">
+		<hereda-de controlador="Typical" /> 
+		<accion nombre="InformeProductosDeFamiliaaccion" modo="list" clase="com.reportes.InformeProductosDeFamiliaaccion" confirmar="true"/>
+	</controlador> 
+	
+	<controlador nombre="Facturas">
+		<hereda-de controlador="Typical" /> 
+
+		<accion nombre="ImprimirFactura" modo="detail" clase="com.modelo.factura.imprimir.ImprimirFactura" />
+
+		<accion nombre="VerFacturasPendientes" modo="list" clase="com.modelo.factura.imprimir.ImprimirFactura" />
+
+		<accion nombre="VerEmpresasDeLaFactura" modo="list" clase="com.modelo.factura.imprimir.ImprimirFactura" />
+
+	</controlador> 
+    
+    
+    
+</controladores>

@@ -1,0 +1,67 @@
+<?xml version = "1.0" encoding = "ISO-8859-1"?>
+
+<!DOCTYPE aplicacion SYSTEM "dtds/aplicacion.dtd">
+
+<aplicacion nombre="facturaff"> 
+	
+	<!--
+	Un módulo por defecto se asume para cada
+	controlador en <modulo-defecto/> 
+	-->
+	<modulo-defecto>		  
+		<controlador nombre="Typical"/>	
+	    <controlador nombre="ExtendedPrint"/>
+	</modulo-defecto>
+
+<!--
+	<modulo nombre="ReporteDeProductos">
+		<modelo nombre="Catalogo"/>
+	    <tab nombre="Productos"/>
+	    <controlador nombre="ExtendedPrint"/>
+	    <controlador nombre="SoloExcel"/>	    
+	</modulo>		
+
+	<modulo nombre="ReporteDeServicios">
+		<modelo nombre="Catalogo"/>
+	    <tab nombre="Servicios"/>
+		    <controlador nombre="ExtendedPrint"/>
+	    <controlador nombre="SoloExcel"/>    
+	</modulo>		
+
+	<modulo nombre="ReporteDelCatalogo">
+		<modelo nombre="Catalogo"/>
+	    <controlador nombre="ExtendedPrint"/>
+	    <controlador nombre="SoloExcel"/>
+	</modulo>		
+	
+	<modulo nombre="ReporteDeClientesActivos">
+		<modelo nombre="Clientes"/>
+	    <tab nombre="Activos"/>
+	    <controlador nombre="ExtendedPrint"/>
+	    <controlador nombre="SoloExcel"/>
+	</modulo>		
+	
+	<modulo nombre="ReporteDeClientesInactivos">
+		<modelo nombre="Clientes"/>
+	    <tab nombre="InActivos"/>
+	    <controlador nombre="ExtendedPrint"/>
+	    <controlador nombre="SoloExcel"/>
+	</modulo>		
+
+	<modulo nombre="ReporteDeClientes">
+		<modelo nombre="Clientes"/>
+	    <controlador nombre="ExtendedPrint"/>
+	    <controlador nombre="SoloExcel"/>
+	</modulo>		
+-->
+
+	<!--
+	Podemos definir módulos adicionales, por ejemplo: 	
+	<modulo nombre="ProfesorSoloLectura">
+		<modelo nombre="Profesor"/>
+		<controlador nombre="Print"/>
+	</modulo>		
+	-->	  
+		
+</aplicacion>
+
